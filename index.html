@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PS Onboarding Activity</title>
+  <script type="text/javascript">
+window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])};
+heap.load("1273556218");
+</script>
+</head>
+<body data-heap-redact-text='true'>
+  <h1>PS Onboarding Assignment</h1>
+
+  <div data-heap-redact-text='true'> This is a div </div>
+  <br>
+
+  <div> This is a form: </div>
+  <br>
+
+  <form class="" onsubmit="setIdentity();">
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email"><br>
+
+    <p>This is a radio input:</p>
+    <input type="radio" id="cool" name="radio_example" value="cool">
+    <label for="cool">Cool</label><br>
+    <input type="radio" id="super_cool" name="radio_example" value="super_cool">
+    <label for="super_cool">Super Cool</label><br>
+    <input type="radio" id="totally_cool" name="radio_example" value="totally_cool">
+    <label for="totally_cool">Totally Cool</label>
+
+    <p>This is a checkbox input:</p>
+    <div>
+    <input type="checkbox" id="awesome" name="checkbox_example" value="awesome">
+    <label for="awesome"> Awesome </label><br>
+    <input type="checkbox" id="super_awesome" name="checkbox_example" value="super_awesome">
+    <label for="super_awesome"> Super Awesome </label><br>
+    <input type="checkbox" id="totally_awesome" name="checkbox_example" value="totally_awesome">
+    <label for="totally_awesome"> Totally Awesome </label>
+    <div>
+
+    <p>This button will submit the form and call heap.identify with the email provided:</p>
+    <button type="submit" title="Submit">
+      <span>Submit</span>
+    </button>
+  </form>
+
+  <p>This button will not do anything</p>
+  <button id="test">
+    <span>Test</span>
+  </button>
+
+  <script>
+    function setIdentity() {
+      if (document.querySelector('#email')!=null) {
+          heap.identify(document.querySelector('#email').value);
+      }
+    }
+  </script>
+
+</body>
+</html>
